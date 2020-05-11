@@ -1,2 +1,3 @@
 # overmind-angular
-Angular extension for Overmind
+
+[https://overmindjs.org](https://overmindjs.org)

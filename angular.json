@@ -1,0 +1,47 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "overmind-angular": {
+      "projectType": "library",
+      "root": "projects/overmind-angular",
+      "sourceRoot": "projects/overmind-angular/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/overmind-angular/tsconfig.lib.json",
+            "project": "projects/overmind-angular/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/overmind-angular/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/overmind-angular/src/test.ts",
+            "tsConfig": "projects/overmind-angular/tsconfig.spec.json",
+            "karmaConfig": "projects/overmind-angular/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/overmind-angular/tsconfig.lib.json",
+              "projects/overmind-angular/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }},
+  "defaultProject": "overmind-angular"
+}

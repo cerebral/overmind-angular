@@ -1,0 +1,10 @@
+{
+  "name": "overmind-angular",
+  "version": "23.0.2",
+  "peerDependencies": {
+    "@angular/common": "^9.1.6",
+    "@angular/core": "^9.1.6",
+    "overmind": "^23.0.1",
+    "tslib": "^1.10.0"
+  }
+}

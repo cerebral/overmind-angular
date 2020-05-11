@@ -10,7 +10,7 @@ import { OvermindService } from './service'
   providers: [
     {
       provide: OvermindService,
-      useFactory: (overmind) => new OvermindService(overmind),
+      useFactory(overmind) { return new OvermindService(overmind) },
       deps: [OVERMIND_INSTANCE],
     },
   ],
